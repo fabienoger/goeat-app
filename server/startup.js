@@ -18,10 +18,9 @@ Meteor.startup(function() {
         email: user.email,
         password: user.password,
         profile: {
-          name: user.name,
-          username: "",
+          firstName: user.name,
+          lastName: "",
           active: true,
-          changeUserName: true,
           admin: true,
           superAdmin: true
         }

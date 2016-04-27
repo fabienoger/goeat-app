@@ -1,0 +1,19 @@
+<template name="menu">
+  <header>
+    <div id="button-open-menu">
+      <i class="icon sidebar"></i>
+    </div>
+    <div class="ui fixed inverted vertical menu" id="navbar">
+      <div id="button-close-menu">
+        <i class="icon close"></i>
+      </div>
+      <a href="/channels/general" class="item logo">
+        Go Eat
+        <img class="ui circular image" src="/images/burning_keyboard.png">
+      </a>
+      <a href="/users/{{ currentUser._id }}" class="item">
+        {{ currentUser.profile.firstName }}
+      </a>
+    </div>
+  </header>
+</template>

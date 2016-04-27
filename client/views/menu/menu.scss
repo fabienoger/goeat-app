@@ -1,0 +1,133 @@
+@import "{}/client/views/_layout/config";
+
+header {
+
+  div#button-open-menu {
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    line-height: 30px;
+    width: 30px;
+    background-color: #FFF;
+    text-align: center;
+    transition: all .25s;
+    text-align: center;
+
+    i.icon.sidebar {
+      color: $p-color;
+    }
+
+    &:hover {
+      background-color: $p-color;
+      i.icon.sidebar {
+        color: #FFF;
+      }
+    }
+  }
+  div.ui.menu#navbar {
+    overflow-y: auto;
+    overflow-x: visible;
+    height: 100%;
+    box-shadow: $p-color 2px 0 2px !important;
+    left: 0px;
+    display: block;
+
+    div#button-close-menu {
+      float: left;
+      z-index: 10;
+      cursor: pointer;
+      position: absolute;
+      line-height: 30px;
+      width: 30px;
+      background-color: #FFF;
+      text-align: center;
+      transition: all .25s;
+      display: none;
+
+      i.icon.close {
+        color: $p-color;
+      }
+
+      &:hover {
+        background-color: $p-color;
+        i.icon.close {
+          color: #FFF;
+        }
+      }
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $p-color;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar {
+      background-color: $bg-color;
+      width: 10px;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar:hover {
+      background-color: $bg-color;
+    }
+    &::-webkit-scrollbar:active {
+      background-color: $bg-color;
+    }
+    div.bottom {
+      background-color: #1b1c1d;
+      width: 100%;
+      .item {
+        text-align: center;
+      }
+    }
+    a.item.logo {
+      img {
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ui.accordion {
+      padding: 0;
+      div.title {
+        padding: 13px 10px !important;
+        color: rgba(255, 255, 255, 0.9);
+        padding: 0;
+        transition: all .25s;
+
+        &:hover {
+          color: #FFF;
+          background-color: rgba(255, 255, 255, 0.08);
+        }
+      }
+      div.content {
+        padding-top: 0;
+        a.item {
+          padding-left: 15px;
+        }
+      }
+    }
+    a.item {
+      padding-left: 10px;
+      padding-right: 10px;
+      .icon {
+        float: left !important;
+        margin-right: 0.5em !important;
+        margin-left: 0 !important;
+      }
+      .icon.dropdown {
+        float: right !important;
+        margin-right: inherit !important;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  main.ui.container-fluid {
+    margin-left: 0;
+  }
+  #button-close-menu, #button-open-menu {
+    display: block !important;
+  }
+  header div.ui.menu#navbar {
+    left: -260px;
+  }
+}
