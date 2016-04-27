@@ -17,5 +17,34 @@ standard-minifier-js    # JS minifier run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
+# Front
+semantic:ui
+fourseven:scss
+#seriousm:emoji-continued
+flemay:less-autoprefixer
+sarasate:semantic-ui-datetimepicker
+
+# Utils
+http
+#random
+underscore
+reactive-dict
+momentjs:moment
+mquandalle:jquery-textcomplete
+
+# Collections
+aldeed:collection2
+
+# Map
+bevanhunt:leaflet@0.3.14
+herrhelms:meteor-leaflet-markercluster
+
+# Accounts
+email
+accounts-ui
+accounts-password
+#mizzao:user-status
+
+# Routes
+kadira:flow-router
+kadira:blaze-layout
