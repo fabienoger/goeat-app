@@ -1,0 +1,63 @@
+<template name="showUser">
+  <div class="show-user">
+    {{#with getUser}}
+      <div class="show-user-header">
+        <div class="ui header center aligned">
+          <div class="content">
+            {{ profile.firstName }}
+            <div class="sub header">
+              $21 ans
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="show-user-content">
+        <div class="band ui four column grid">
+          <div class="column center aligned">
+            <div class="header">Amis</div>
+            <div class="content">
+              $11
+            </div>
+          </div>
+          <div class="column center aligned">
+            <div class="header">Repas acceptés</div>
+            <div class="content">
+              $27
+            </div>
+          </div>
+          <div class="column center aligned">
+            <div class="header">Repas crées</div>
+            <div class="content">
+              $8
+            </div>
+          </div>
+          <div class="column center aligned">
+            <div class="header">Badges</div>
+            <div class="content">
+              $18
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="ui header dividing center aligned teal">
+            Details
+          </div>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia sollicitudin neque, non gravida nisl. Vestibulum eleifend posuere egestas. Donec ornare, elit non ullamcorper accumsan, orci lectus tempus justo, et cursus libero dolor a ipsum. Morbi volutpat magna at volutpat consectetur. Aliquam hendrerit elit magna, a malesuada nunc tincidunt at. Integer elit neque, pretium ut feugiat et, egestas sit amet sapien. Maecenas semper nisl quis lorem aliquet, at egestas ex dictum.</p>
+            <p>Cras rutrum purus quis velit bibendum feugiat. Duis eget lorem id risus dapibus vestibulum. Aenean in bibendum velit. Nullam condimentum lacus vitae efficitur porttitor. Aenean semper pulvinar placerat. Proin rutrum risus elementum tempus finibus. Etiam tristique purus risus, at faucibus sem sollicitudin vitae. Suspendisse aliquet mi non nunc ullamcorper, eget pretium eros rhoncus. Proin quis tortor sit amet sapien tempor gravida eu ac neque. Etiam maximus, nisl eget volutpat porttitor, dui arcu ullamcorper lacus, sit amet lacinia erat quam vitae tortor. Phasellus iaculis risus ut orci commodo pellentesque. Curabitur ac cursus est. Nam et lectus a dolor pellentesque vestibulum.</p>
+          </div>
+          <div class="footer">
+            <i class="icon angle down teal huge"></i>
+          </div>
+        </div>
+<!--
+        <div class="evaluations">
+          <div class="ui header center aligned">
+            Evaluations
+          </div>
+        </div>
+-->
+      </div>
+    {{/with}}
+  </div>
+  </template>

@@ -12,6 +12,15 @@ FlowRouter.route('/logs', {
   name: 'logs'
 });
 
+// ##### USERS #####
+// User route
+FlowRouter.route('/users/:id', {
+  action: function() {
+    BlazeLayout.render('layout', { main: 'showUser', navbar: 'menu' });
+  },
+  name: 'showUser'
+});
+
 
 // Redirect to register or login template
 

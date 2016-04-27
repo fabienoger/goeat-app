@@ -1,0 +1,39 @@
+@import "{}/client/views/_layout/config";
+
+div.show-user {
+  background-color: #FFF;
+
+  div.show-user-header {
+  }
+  div.show-user-content {
+    div.band {
+      margin-top: 0;
+      margin-bottom: 0;
+      background-color: $clear-grey;
+
+      div.column {
+        div.header {
+          font-size: 0.8em;
+          color: #999;
+        }
+        div.content {
+          color: #555;
+          font-size: 1.5em;
+          margin-top: 5px;
+        }
+      }
+    }
+    div.details {
+      padding-top: 5px;
+      div.content {
+        padding: 0 15px;
+      }
+      div.footer {
+        text-align: center;
+      }
+    }
+    div.evaluations {
+      background-color: $clear-grey;
+    }
+  }
+}
