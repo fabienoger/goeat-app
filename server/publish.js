@@ -5,3 +5,7 @@ Meteor.publish('users', function() {
 Meteor.publish("userStatus", function() {
   return Meteor.users.find({ "status.online": true });
 });
+
+Meteor.publish('groups', function() {
+  return Groups.find({});
+});

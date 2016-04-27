@@ -1,4 +1,10 @@
 <template name="menu">
+  <div class="create-group-modal ui small modal">
+    <i class="icon close"></i>
+    <div class="content">
+      {{> createGroup}}
+    </div>
+  </div>
   <header>
     <div id="button-open-menu">
       <i class="icon sidebar big"></i>
@@ -14,7 +20,14 @@
       <a href="/users/{{ currentUser._id }}" class="item">
         {{ currentUser.profile.firstName }}
       </a>
-      <a href="/messages" class="item">
+      <a id="open-create-group" class="item">
+        <i class="icons">
+          <i class="icon users"></i>
+          <i class="inverted corner add icon"></i>
+        </i>
+        Create group
+      </a>
+      <a href="/conversations" class="item">
         <i class="icon mail"></i>
         Messages
       </a>

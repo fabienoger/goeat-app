@@ -15,6 +15,10 @@ Template.menu.onRendered(function() {
 *********************/
 
 Template.menu.events({
+  // Open create group modal
+  'click #open-create-group': function() {
+    $('.create-group-modal.ui.modal').modal("show");
+  },
   // Close menu (left: 0/-260px)
   'click #button-close-menu': function(e, t) {
     $("main.ui.container-fluid").animate({marginLeft: "0"}, 250);
