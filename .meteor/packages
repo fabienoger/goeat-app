@@ -44,7 +44,7 @@ herrhelms:meteor-leaflet-markercluster
 email
 accounts-ui
 accounts-password
-#mizzao:user-status
+mizzao:user-status
 
 # Routes
 kadira:flow-router

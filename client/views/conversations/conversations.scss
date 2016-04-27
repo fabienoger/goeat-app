@@ -1,0 +1,41 @@
+@import "{}/client/views/_layout/config";
+
+div.conversations {
+  div.ui.header {
+//    background-image: url("/images/background/stardust.png");
+    padding: 50px 15px 15px 15px;
+    color: $clear-grey;
+  }
+  div.content.conversation-list {
+    a.conversation {
+      display: block;
+      background-color: $clear-grey;
+      border-bottom: 1px solid $grey;
+      padding: 15px;
+      transition: all .25s;
+      cursor: pointer;
+      color: #666;
+
+      div.profile-picture {
+
+      }
+      div.content {
+        div.participants {
+
+        }
+        div.informations {
+          span.text-message {
+          }
+          span.last-message {
+            float: right;
+            font-size: 0.8em;
+            color: $grey;
+          }
+        }
+      }
+      &:hover {
+        background-color: #FFF;
+      }
+    }
+  }
+}

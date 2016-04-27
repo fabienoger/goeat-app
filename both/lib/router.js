@@ -21,6 +21,14 @@ FlowRouter.route('/users/:id', {
   name: 'showUser'
 });
 
+// ##### CONVERSATIONS #####
+// Conversations route
+FlowRouter.route('/conversations', {
+  action: function() {
+    BlazeLayout.render('layout', { main: 'conversations', navbar: 'menu' });
+  },
+  name: 'conversations'
+});
 
 // Redirect to register or login template
 
