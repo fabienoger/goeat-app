@@ -1,0 +1,42 @@
+<template name="register">
+  <div class="register ui card">
+    <div class="content">
+      <div class="ui header">
+        Register
+      </div>
+      <form id="register-form" class="ui form">
+        <div class="message-wrapper" id="register-info"></div>
+        <div class="field">
+          <label for="account-first-name">First Name : </label>
+          <input type="text" id="account-first-name" />
+        </div>
+        <div class="field">
+          <label for="account-last-name">Last Name : </label>
+          <input type="text" id="account-last-name" />
+        </div>
+        <div class="field">
+          <label for="account-email">Email : </label>
+          <input type="text" id="account-email" />
+        </div>
+        <div class="field">
+          <label for="account-password">Password : </label>
+          <input type="password" id="account-password" />
+        </div>
+        <div class="field">
+          <label for="confirm-password">Confirm your password : </label>
+          <input type="password" id="confirm-password" />
+        </div>
+        <div class="action">
+          <button type="submit" class="ui labeled green icon button">
+            <i class="checkmark icon"></i>
+            Sign up
+          </button>
+          <div class="render-login ui right floated labeled blue icon button">
+            <i class="sign in icon"></i>
+            Sign in
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

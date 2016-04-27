@@ -5,14 +5,37 @@ FlowRouter.route('/', {
   name: 'home'
 });
 
+FlowRouter.route('/logs', {
+  action: function() {
+    BlazeLayout.render('logs', { log: 'login' });
+  },
+  name: 'logs'
+});
+
+
+// Redirect to register or login template
+
+FlowRouter.route('/login', {
+  action: function() {
+    BlazeLayout.render('logs', { log: 'login' });
+  },
+  name: 'login'
+});
+
+FlowRouter.route('/register', {
+  action: function() {
+    BlazeLayout.render('logs', { log: 'register' });
+  },
+  name: 'register'
+});
+
 
 // Redirect the user if it is not connected
 
 function redirectIfIsNotLogin(context) {
   if (!Meteor.userId()) {
-// The following line isn't executed
-//    BlazeLayout.render('layout', { main: 'login' }, {force: true});
-    FlowRouter.go('login');
+//    FlowRouter.render('/logs');
+    BlazeLayout.render('logs', { log: 'login' }, {force: true});
   } else {
 //    console.log(context);
   }

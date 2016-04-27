@@ -29,6 +29,7 @@ http
 #random
 underscore
 reactive-dict
+mdg:geolocation
 momentjs:moment
 mquandalle:jquery-textcomplete
 

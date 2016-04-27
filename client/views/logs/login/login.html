@@ -1,0 +1,30 @@
+<template name="login">
+  <div class="login ui card">
+    <div class="content">
+      <div class="ui header">
+        Sign In
+      </div>
+      <form id="login-form" class="ui form">
+        <div class="message-wrapper" id="login-info"></div>
+        <div class="field">
+          <label for="login-email">Email : </label>
+          <input type="email" class="" id="login-email" />
+        </div>
+        <div class="field">
+          <label for="login-password">Password : </label>
+          <input type="password" class="" id="login-password" />
+        </div>
+        <div class="action">
+          <button type="submit" class="ui green labeled icon button">
+            <i class="sign in icon"></i>
+            Sign in
+          </button>
+          <div class="render-register ui blue labeled right floated icon button">
+            <i class="add user icon"></i>
+            Sign Up
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>
