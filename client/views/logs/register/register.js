@@ -32,7 +32,7 @@ Template.register.events({
               firstName: firstName,
               lastName: lastName,
               active: true,
-              geolocation: {lat: geoloc.lat, lng: geoloc.lng},
+              geolocation: '',//{lat: geoloc.lat, lng: geoloc.lng},
               admin: false,
               superAdmin: false
             }
@@ -40,9 +40,10 @@ Template.register.events({
 
           Accounts.createUser(user, function(err) {
             if (!err) {
-              FlowRouter.go('/');
-              Modules.client.utils.displayWelcomePanel();
-              Modules.client.utils.displayPanel("message-info", "positive", "checkmark", "Welcome ! You are login.");
+              BlazeLayout.render('layout', { main: 'home', navbar: 'menu' });
+              setTimeout(function() {
+                Modules.client.utils.displayWelcomePanel();
+              }, 250);
             } else {
               console.error("Accounts.createUser ", err);
               if (err.error == 400) {

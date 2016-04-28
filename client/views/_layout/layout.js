@@ -18,3 +18,10 @@ Template.registerHelper(
     return Meteor.users.findOne({_id: userId});
   }
 );
+
+// Return all users except the current
+Template.registerHelper(
+  'getUsersExceptCurrent', function() {
+    return Meteor.users.find({_id: {$ne: Meteor.userId()}}).fetch();
+  }
+);

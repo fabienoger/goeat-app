@@ -1,4 +1,13 @@
+/************************
+         EVENTS
+************************/
 
+Template.conversations.events({
+  // Open New Conversation modal
+  'click #new-conversation': function() {
+    $('.ui.modal.new-conversation-modal').modal("show");
+  }
+});
 
 /************************
          HELPERS
@@ -19,22 +28,22 @@ Template.conversations.helpers({
   // Return conversations for the currentUser
   getConversations: function() {
     var conversations = [{
-        participants: ["L8xuAXxJfh6QsBw8E", "k9M7yfWbfFQofTqxw"],
+        participants: ["qYAvBt5An4Wt7K2F6", "ew9nkYmjqySgL8s7E"],
         createdAt: new Date(),
         lastUpdate: new Date(),
         text: "Lorem Ipsum text..."
       }, {
-        participants: ["L8xuAXxJfh6QsBw8E", "k9M7yfWbfFQofTqxw"],
+        participants: ["qYAvBt5An4Wt7K2F6", "ew9nkYmjqySgL8s7E"],
         createdAt: new Date(),
         lastUpdate: new Date(),
         text: "Lorem Ipsum text..."
       }, {
-        participants: ["L8xuAXxJfh6QsBw8E", "k9M7yfWbfFQofTqxw"],
+        participants: ["qYAvBt5An4Wt7K2F6", "ew9nkYmjqySgL8s7E"],
         createdAt: new Date(),
         lastUpdate: new Date(),
         text: "Lorem Ipsum text..."
       }, {
-        participants: ["L8xuAXxJfh6QsBw8E", "k9M7yfWbfFQofTqxw"],
+        participants: ["qYAvBt5An4Wt7K2F6", "ew9nkYmjqySgL8s7E"],
         createdAt: new Date(),
         lastUpdate: new Date(),
         text: "Lorem Ipsum text..."

@@ -8,7 +8,7 @@ Modules.client.utils = {
     $elmt.innerHTML = "<div class='ui floating message primary-color'><i class='close icon'></i>"
       + "<div class'header'><i class='icon heart'></i>Welcome guys !</div>"
       + "<div class='list'>"
-      + "<li>The aim of this chat is to keep secret your real identity as long as possible.</li>"
+      + "<li>The aim of this app is to meet over a meal.</li>"
       + "<li>And try to guess other's identities, enjoy. ;)</li>"
       + "</div>"
       + "</div>";

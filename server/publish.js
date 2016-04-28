@@ -1,5 +1,5 @@
 Meteor.publish('users', function() {
-  return Meteor.users.find({roles: {$nin: ["superadmin"]}});
+  return Meteor.users.find({display: true});
 });
 
 Meteor.publish("userStatus", function() {

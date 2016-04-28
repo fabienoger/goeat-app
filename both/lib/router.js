@@ -51,14 +51,15 @@ FlowRouter.route('/register', {
 
 function redirectIfIsNotLogin(context) {
   if (!Meteor.userId()) {
-//    FlowRouter.render('/logs');
-    BlazeLayout.render('logs', { log: 'login' }, {force: true});
+//    BlazeLayout.render('logs', { log: 'login' }, {force: true});
+    FlowRouter.go('/');
   } else {
 //    console.log(context);
   }
 }
 
-//FlowRouter.triggers.enter([redirectIfIsNotLogin], {except: ["login", "register"]});
+FlowRouter.triggers.enter([redirectIfIsNotLogin], {except: ["login", "register"]});
+
 // Redirect the user if it is not admin
 
 function redirectIfIsNotAdmin(context) {
@@ -74,7 +75,7 @@ function redirectIfIsNotAdmin(context) {
   }
 }
 
-FlowRouter.triggers.enter([redirectIfIsNotAdmin], {only: ["feedBacks"]});
+FlowRouter.triggers.enter([redirectIfIsNotAdmin], {only: ["feedBacks", "users"]});
 
 // Redirect the user if it is not Super Admin
 

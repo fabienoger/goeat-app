@@ -5,16 +5,31 @@ Meteor.startup(function() {
   if (Meteor.users.find().fetch().length === 0) {
     console.log("Creating users [...]");
     var id;
-    var users = [
-      {name: "Super Admin", email: "super@fabienoger.com", roles: ['superadmin'], language: "france", password: "super123"},
-      {name: "Admin", email: "admin@fabienoger.com", roles: ['admin'], language: "france", password: "admin123"},
-      {name: "Foger", email: "fab-oger@live.fr", roles: ['admin'], language: "france", password: "admin123"}
-    ];
+    var users = [{
+        name: "Super Admin",
+        email: "super@fabienoger.com",
+        display: false,
+        language: "france",
+        password: "super123"
+      },{
+        name: "Admin",
+        email: "admin@fabienoger.com",
+        display: false,
+        language: "france",
+        password: "admin123"
+      },{
+        name: "Foger",
+        email: "fab-oger@live.fr",
+        display: true,
+        language: "france",
+        password: "admin123"
+    }];
 
     _.each(users, function (user) {
       console.log(user);
 
       id = Accounts.createUser({
+        display: user.display,
         email: user.email,
         password: user.password,
         profile: {

@@ -1,0 +1,27 @@
+<template name="newConversation">
+  <div class="ui header">
+    <i class="icons">
+      <i class="icon mail"></i>
+      <i class="inverted corner icon add"></i>
+    </i>
+    Créer une conversation
+  </div>
+  <div class="new-conversation">
+    <form class="ui form" id="new-conversation">
+      <div class="message-wrapper" id="newConversationInfo"></div>
+      <div class="field">
+        <label>Invite members</label>
+        <select multiple="" class="ui dropdown search" id="membersChannel">
+          {{#each getUsersExceptCurrent}}
+            <option value="{{ _id }}">{{ profile.firstName }} {{ profile.lastName }}</option>
+          {{/each}}
+        </select>
+      </div>
+
+      <button type="submit" class="ui button labeled icon green">
+        <i class="icon add"></i>
+        Créer
+      </button>
+    </form>
+  </div>
+</template>

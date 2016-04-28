@@ -1,10 +1,20 @@
 <template name="conversations">
+  <div class="ui modal small new-conversation-modal">
+    <i class="icon close"></i>
+    {{> newConversation }}
+  </div>
   <div class="conversations">
     <div class="ui header">
       <i class="icon mail"></i>
-      Conversations
+      Messages
     </div>
     <div class="content conversation-list">
+      <div class="actions">
+        <button id="new-conversation" class="ui labeled icon button inverted green">
+          <i class="icon add"></i>
+          Nouveau message
+        </button>
+      </div>
       {{#each getConversations }}
         <a href="/conversations/{{ _id }}" class="conversation">
           <div class="profile-picture">

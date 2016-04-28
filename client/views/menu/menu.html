@@ -9,7 +9,7 @@
     <div id="button-open-menu">
       <i class="icon sidebar big"></i>
     </div>
-    <div class="ui fixed inverted vertical menu" id="navbar">
+    <div class="ui fixed vertical menu" id="navbar">
       <div id="button-close-menu">
         <i class="icon close big"></i>
       </div>
@@ -17,20 +17,39 @@
         Go Eat
         <img class="ui circular image" src="/images/burning_keyboard.png">
       </a>
-      <a href="/users/{{ currentUser._id }}" class="item">
-        {{ currentUser.profile.firstName }}
-      </a>
-      <a id="open-create-group" class="item">
-        <i class="icons">
-          <i class="icon users"></i>
-          <i class="inverted corner add icon"></i>
-        </i>
-        Create group
-      </a>
-      <a href="/conversations" class="item">
-        <i class="icon mail"></i>
-        Messages
-      </a>
+      {{#if currentUser }}
+        <a href="/users/{{ currentUser._id }}" class="item">
+          {{ currentUser.profile.firstName }}
+        </a>
+        <a id="open-create-group" class="item">
+          <i class="icons">
+            <i class="icon users"></i>
+            <i class="inverted corner add icon"></i>
+          </i>
+          Create group
+        </a>
+        <a href="/conversations" class="item">
+          <i class="icon mail"></i>
+          Messages
+        </a>
+        <div class="bottom menu">
+          <div class="item">
+            <a class="ui red button labeled icon" href="" id="logout">
+              <i class="icon sign out"></i>
+              Logout
+            </a>
+          </div>
+        </div>
+      {{ else }}
+        <div class="bottom menu">
+          <div class="item">
+            <a class="ui green button labeled icon" href="/">
+              <i class="icon sign in"></i>
+              Login
+            </a>
+          </div>
+        </div>
+      {{/if}}
     </div>
   </header>
 </template>
