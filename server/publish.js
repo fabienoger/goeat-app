@@ -9,3 +9,11 @@ Meteor.publish("userStatus", function() {
 Meteor.publish('groups', function() {
   return Groups.find({});
 });
+
+Meteor.publish('conversations', function() {
+  return Conversations.find({});
+});
+
+Meteor.publish('messages', function() {
+  return Messages.find({});
+});
