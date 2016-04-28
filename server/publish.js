@@ -1,5 +1,5 @@
 Meteor.publish('users', function() {
-  return Meteor.users.find({display: true});
+  return Meteor.users.find({ "profile.display": true });
 });
 
 Meteor.publish("userStatus", function() {

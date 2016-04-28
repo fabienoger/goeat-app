@@ -8,6 +8,23 @@
       Create group
     </div>
     <form class="ui form" id="createGroupForm">
+      <div class="field">
+        <label for="name">Nom du groupe : </label>
+        <input type="text" id="name" />
+      </div>
+      <div class="field">
+        <label>Inviter des amis :</label>
+        <select multiple="" class="ui dropdown search" id="members">
+          {{#each getUsersExceptCurrent}}
+            <option value="{{ _id }}">{{ profile.firstName }} {{ profile.lastName }}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="field">
+        <label for="dateTimePicker">Choisir une date et une heure : </label>
+        <input type="text" class="ui dropdown datetimepicker" id="dateTimePicker" />
+      </div>
+
       <button type="submit" class="ui button green labeled icon">
         <i class="icon add"></i>
         Create

@@ -29,11 +29,11 @@ Meteor.startup(function() {
       console.log(user);
 
       id = Accounts.createUser({
-        display: user.display,
         email: user.email,
         password: user.password,
         profile: {
           firstName: user.name,
+          display: user.display,
           lastName: "",
           active: true,
           admin: true,
@@ -43,6 +43,7 @@ Meteor.startup(function() {
       usersId.push(id);
       // Email verification
       Meteor.users.update({_id: id}, {$set: {'emails.0.verified': true}});
+      console.log(Meteor.users.findOne({_id: id}));
     });
   }
 });

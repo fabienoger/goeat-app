@@ -29,6 +29,7 @@ Template.register.events({
             password: password,
             profile:
             {
+              display: true,
               firstName: firstName,
               lastName: lastName,
               active: true,
